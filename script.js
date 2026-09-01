@@ -53,24 +53,6 @@ document.querySelector('.cta-button').addEventListener('click', () => {
 // Add some interactivity to portfolio items
 document.querySelectorAll('.portfolio-item').forEach(item => {
     item.addEventListener('click', function() {
-        // You can add modal or detailed view here
         console.log('Portfolio item clicked');
     });
-});
-
-// Animate numbers on scroll (optional)
-const animateOnScroll = (entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animate');
-        }
-    });
-};
-
-const scrollObserver = new IntersectionObserver(animateOnScroll, {
-    threshold: 0.5
-});
-
-document.querySelectorAll('[data-animate]').forEach(el => {
-    scrollObserver.observe(el);
 });
